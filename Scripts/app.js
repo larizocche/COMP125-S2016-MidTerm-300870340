@@ -5,7 +5,7 @@
  * @date June 22, 2016
  * 
  * StudentID: 300870340
- * website: comp125-s2016-lesson5.azurewebsites.net
+ * website: http://comp125-s2016-midterm-300870340.azurewebsites.net/
  * @description This file is the main javascript file for the web site
  */
 
