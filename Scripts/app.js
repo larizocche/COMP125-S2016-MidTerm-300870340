@@ -32,11 +32,40 @@ paragraphsData [9] = "Near the more well-known Crete, Gavdos is the most souther
 
 var paragraphsLength = paragraphs.length-1;
     for (var index = paragraphsLength; index >= 0; index--) {
-        console.log(index);
         if(paragraphs [index]) {
          paragraphs[index].innerHTML = paragraphsData[index];
         }
     }
+
+var firstName = document.getElementById("firstName");
+var lastName = document.getElementById("lastName");
+var contactNumber = document.getElementById ("contactNumber");
+var email = document.getElementById ("email");
+var yourMessage = document.getElementById ("yourMessage");
+
+var contactForm = document.getElementById("contactForm");
+    //4.2 add event listener               //callback function
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault(); //prevent from my form submission
+        DisplayInput();
+        contactForm.reset();
+        
+    });
+    //6 print into the console  - display the form values and on the page
+    function DisplayInput(){
+
+
+//display on the console
+        console.log ("*******************************");
+        console.log("First Name: " + firstName.value);
+        console.log("Last Name: " + lastName.value);
+        console.log ("Contact number " + contactNumber.value);
+        console.log ("E-mail " + email.value);
+        console.log ("Message " + yourMessage.value);
+        console.log ("*******************************");
+
+    }
+
 
 
 
