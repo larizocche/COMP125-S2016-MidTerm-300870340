@@ -1,9 +1,24 @@
+/**
+ * FileName: app.js
+ * 
+ * @author Larissa Zocche
+ * @date June 22, 2016
+ * 
+ * StudentID: 300870340
+ * website: comp125-s2016-lesson5.azurewebsites.net
+ * @description This file is the main javascript file for the web site
+ */
+
+
 // setup your IIFE (Immediately Invoked Function Expression)
 (function () {
 "use strict";
 
+/**
+ * This variable define an array of HTML elements.
+ * 
+ */
 var paragraphs = [];
-
 paragraphs [0] = document.getElementById("IntroParagraph");
 paragraphs [1] = document.getElementById ("Folegandros");
 paragraphs [2] = document.getElementById ("Alonissos");
@@ -15,10 +30,12 @@ paragraphs [7] = document.getElementById ("Hydra");
 paragraphs [8] = document.getElementById ("Ithaca");
 paragraphs [9] = document.getElementById ("Gavdos");
 
-
+/**
+ * This variable displays the data on the screen.
+ * 
+ */
 var paragraphsData = [];
-
-paragraphsData [0] = "Now is the time to travel to Greece. The country may be going through an economic crisis, but many travellers say that it hasn't impacted the experience of visiting. Plus, there may be some great deals. Greece has 1,400 islands, though only 230 of them are inhabited. And while everyone knows about Santorini and Mykonos, there are gorgeous lesser-known islands in Greece, too.";
+paragraphsData [0] = "Now is the time to travel to Greece. The country may be going through an economic crisis, but many travellers say that it hasn't impacted the experience of visiting. Plus, there may be some great deals.<br> Greece has 1,400 islands, though only 230 of them are inhabited.<br> And while everyone knows about Santorini and Mykonos, there are gorgeous lesser-known islands in Greece, too.";
 paragraphsData [1] = "Folegandros is almost a Greek cliché, full of beautiful whitewashed houses with bright blue doors lining cobblestoned streets on steep cliffs. Rugged and remote, without chain hotels or package tours — not even a bank or ATM — and accessible only by ferry, the volcanic island boasts solitude in spades, secluded beaches, and incredible sunsets."; 
 paragraphsData [2] = "Off the mainland, this island, whose surrounding waters are a designated marine park full of seals and dolphins, is a nature lover's dream. The spectacular spot's crystal clear waters and beautiful beaches are perfect for diving, and its lush flora and dense forests ideal for hikes. Since the rich landscape is chock full of indigenous herbs, it's also known for its traditional medicine, and home of the International Academy of Homeopathy."; 
 paragraphsData [3] = "This bohemian paradise is more Côte d'Azur than Grecian island. Spetses was hot in the '60s, when it hosted Marilyn Monroe and Elizabeth Taylor, and remains a swanky summer retreat for Athens' glitterati to this day, full of fancy hotels, mansions and yachts, and stylish boutiques. Aside from a handful of locally-owned cabs, the four-mile-long island has banned cars in town, giving it a refreshingly 19th-century vibe, with horse-drawn carriages being a common sight."; 
@@ -29,7 +46,9 @@ paragraphsData [7] = "The first thing you'll notice on this beautiful island is 
 paragraphsData [8] = "Most famous for being the home of Odysseus, and a prominent figure in Homer's The Odyssey, Ithaca is said to have been inhabited since the 2nd millennium BC. Made up of two islands joined by a narrow strip of land, many visit it to see the legendary sites mentioned by Homer. However, Ithaca is more than its mythical counterpart, beckoning with secluded beaches, dramatic cliffs, beautiful olive groves, and sleepy fishing villages full of Byzantine churches and monasteries.";
 paragraphsData [9] = "Near the more well-known Crete, Gavdos is the most southern island in Greece — and the most southern spot in Europe discounting the Canaries. Only accessible by ferry, the remote island has only about 50 permanent residents, and can feel like your private playground. Local legend has it that the island was the home of goddess Calypso, who kept Odysseus prisoner here. Today, a favorite tourist activity is to visit the spot believed to be her cave. Be warned, you won't find any luxury hotels here. While the romantically under-developed, super laid back island has a number of rooms for rent, those are limited, as the real draw here for many is the free, seaside camping.";
 
-
+/**
+ * This variable checks if the paragraphs exists.
+ */
 var paragraphsLength = paragraphs.length-1;
     for (var index = paragraphsLength; index >= 0; index--) {
         if(paragraphs [index]) {
@@ -37,25 +56,37 @@ var paragraphsLength = paragraphs.length-1;
         }
     }
 
+
+/**
+ * This variables displays on the console the datas by creating a reference
+ */
 var firstName = document.getElementById("firstName");
 var lastName = document.getElementById("lastName");
 var contactNumber = document.getElementById ("contactNumber");
 var email = document.getElementById ("email");
 var yourMessage = document.getElementById ("yourMessage");
 
+
+    /**
+     * Event handler for the contactForm submit event
+     */
 var contactForm = document.getElementById("contactForm");
-    //4.2 add event listener               //callback function
+   
     contactForm.addEventListener("submit", function (event) {
         event.preventDefault(); //prevent from my form submission
         DisplayInput();
         contactForm.reset();
         
     });
-    //6 print into the console  - display the form values and on the page
+   
+   /**
+     * displays the form values on the console
+     * 
+     * @method DisplayInput
+     * @returns {void}
+     */
     function DisplayInput(){
 
-
-//display on the console
         console.log ("*******************************");
         console.log("First Name: " + firstName.value);
         console.log("Last Name: " + lastName.value);
@@ -65,13 +96,6 @@ var contactForm = document.getElementById("contactForm");
         console.log ("*******************************");
 
     }
-
-
-
-
-
-
-
 
 })();
 
